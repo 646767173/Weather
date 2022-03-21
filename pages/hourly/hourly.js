@@ -5,6 +5,7 @@ Page({
 		region_id:'',
 		msg:'',
 		hourly:[],
+		['msg.icon']:'101'
 	},
 	// 改变城市的函数
 	changeRegion:function(e){

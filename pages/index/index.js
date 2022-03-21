@@ -5,6 +5,7 @@ Page({
 		region:['广东省','广州市','海珠区'],
 		region_id:'',
 		msg:'',
+		['msg.icon']:'101'
 	},
 	// 改变城市调用的函数 
 	changeRegion:function(e){
