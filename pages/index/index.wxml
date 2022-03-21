@@ -1,0 +1,39 @@
+<view class="container">
+	<!-- 区域1，地区选择器 -->
+	<picker mode="region" bindchange='changeRegion'>
+		<view> 当前选择的城市： {{region}} </view>
+	</picker>
+
+	<!-- 区域2，文本区域 -->
+	<text>当前实时天气： {{msg.temp}}℃ {{msg.text}} </text>
+	<text>体感温度：{{msg.feelsLike}}℃ </text>
+
+	<!-- 区域3，图片区域 -->
+	<image src="../../images/{{msg.icon}}.svg"></image>
+	
+	<!-- 区域4，多行天气信息 -->
+	<view class="detail">
+		今日详情
+		<view class="bar">
+			<view class="box">湿度</view>
+			<view class="box">气压</view>
+			<view class="box">能见度</view>
+		</view>
+		<view class="bar">
+			<view class="box">{{msg.humidity}} %</view>
+			<view class="box">{{msg.pressure}} hPa</view>
+			<view class="box">{{msg.vis}} km</view>
+		</view>
+		<view class="bar">
+			<view class="box">风向</view>
+			<view class="box">风速</view>
+			<view class="box">风力</view>
+		</view>
+		<view class="bar">
+			<view class="box">{{msg.windDir}}</view>
+			<view class="box">{{msg.windSpeed}} km/h</view>
+			<view class="box">{{msg.windScale}} 级</view>
+		</view>
+	</view>
+
+</view>

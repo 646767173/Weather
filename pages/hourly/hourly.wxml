@@ -1,0 +1,28 @@
+<view class="container">
+	<!-- 区域1，地区选择器 -->
+	<view class="head">
+		<picker mode="region" bindchange='changeRegion'>
+			<view> 当前选择的城市： {{region}} </view>
+		</picker>
+	</view>
+
+	<!-- 区域2，当前时间，天气，风向，温度-->
+	<view class="left">
+		<text>预报时间：{{hourly[0].fxTime}}</text>
+		<text>{{msg.text}} {{msg.temp}}℃ {{msg.windDir}}</text>
+		<image src="../../images/{{msg.icon}}.svg" style="height: 180rpx ; width:180rpx; "></image>
+	</view>
+
+	<!-- 区域4，24h内逐小时天气 -->
+	接下来24h内逐小时预报
+	<view class="content" wx:for="{{hourly}}" wx:key="hourly{{index}}">
+		<view class="box">第{{index+1}}h</view>
+		<view class="box">{{item.text}}</view>
+		<view class="box">
+			<image src="../../images/{{item.icon}}.svg"></image>
+		</view>
+		<view class="box">{{item.temp}}℃</view>
+		<view class="box">{{item.windDir}}</view>
+	</view>
+
+</view>

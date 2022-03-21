@@ -1,0 +1,47 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/detail/detail",
+		"pages/hourly/hourly",
+		"pages/my/my"
+	],
+	"window": {
+		"navigationBarBackgroundColor": "#3883fa",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "说天气",
+		"backgroundColor": "#eeeeee",
+		"backgroundTextStyle": "light",
+		"enablePullDownRefresh": false
+	},
+	"sitemapLocation": "sitemap.json",
+	"tabBar": {
+		"color": "#000000",
+		"selectedColor": "#328EEB",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "主页",
+				"iconPath": "images/index1.png",
+				"selectedIconPath": "images/index2.png"
+			},
+			{
+				"pagePath": "pages/detail/detail",
+				"text": "预报",
+				"iconPath": "images/more1.png",
+				"selectedIconPath": "images/more2.png"
+			},
+			{
+				"pagePath": "pages/hourly/hourly",
+				"text": "逐小时",
+				"iconPath": "images/24h1.png",
+				"selectedIconPath": "images/24h2.png"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "我的",
+				"iconPath": "images/my1.png",
+				"selectedIconPath": "images/my2.png"
+			}
+		]
+	}
+}

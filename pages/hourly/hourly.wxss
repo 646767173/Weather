@@ -1,0 +1,38 @@
+.container{
+	height: 180vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background-color: skyblue;
+}
+.head{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+.left{
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content:space-around;
+}
+.content{
+	width: 98%;
+	display: flex;
+	flex-direction: row;
+	border: 1px solid black;
+}
+.box{
+	width: 20%;
+	text-align: center;
+}
+image{
+	height: 50rpx;
+	width:  55rpx;
+}
+text{
+	font-size: 40rpx;
+	color: #2e75bd;
+}

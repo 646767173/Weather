@@ -1,0 +1,52 @@
+<view class="container">
+	<!-- 区域1，地区选择器 -->
+	<view class="head">
+		<picker mode="region" bindchange='changeRegion'>
+		<view> 当前选择的城市： {{region}} </view>
+		</picker>
+	</view>
+	
+	<!-- 区域2， 日期与今日温度-->
+	<view class="left">
+		<text>{{daily[0].fxDate}}</text>
+		<view>{{daily[0].textDay}}</view>
+		<view><image src="../../images/{{daily[0].iconDay}}.svg" style="height:80px;width:100px"></image></view>
+		<text style="color:green">{{daily[0].tempMin}}</text>
+		<view>~</view>
+		<text style="color:red">{{daily[0].tempMax}}</text>℃
+	</view>
+
+	<!-- 区域3，近一周天气情况 -->
+	近一周天气预报
+	<view class="content" wx:for="{{newDaliy}}" wx:key="newDaliy{{index}}">
+		<view class="box2">{{item.fxDate}}</view>
+		<view class="box2">{{item.textDay}}</view>
+		<view class="box2">{{item.windDirDay}}</view>
+		<view class="box2">{{item.tempMin}}/{{item.tempMax}}℃</view>
+	</view>
+
+	<!-- 区域4，今日指数信息 -->
+	<view class="index">
+		<view class="bar">
+			<view class="box">{{indexDaily[3].name}}</view>
+			<view class="box">{{indexDaily[2].name}}</view>
+			<view class="box">{{indexDaily[4].name}}</view>
+		</view>
+		<view class="bar">
+			<view class="box">{{indexDaily[3].category}}</view>
+			<view class="box">{{indexDaily[2].category}}</view>
+			<view class="box">{{indexDaily[4].category}}</view>
+		</view>
+		<view class="bar">
+			<view class="box">{{indexDaily[0].name}}</view>
+			<view class="box">{{indexDaily[5].name}}</view>
+			<view class="box">{{indexDaily[1].name}}</view>
+		</view>
+		<view class="bar">
+			<view class="box">{{indexDaily[0].category}}</view>
+			<view class="box">{{indexDaily[5].category}}</view>
+			<view class="box">{{indexDaily[1].category}}</view>
+		</view>
+	</view>
+
+</view>

@@ -1,0 +1,34 @@
+.container{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background-color: skyblue;
+}
+.detail{
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid black;
+}
+.bar{
+	display: flex;
+	flex-direction: row;
+	margin: 20rpx 0;
+}
+.box{
+	width: 33.3%;
+	text-align: center;
+}
+.land{
+	width: 95%;
+	border: 1px solid black;
+}
+text{
+	font-size: 45rpx;
+	color: #2e75bd;
+}
+image{
+	width: 480rpx;
+}

@@ -1,0 +1,28 @@
+<!-- 区域1，登录区域 -->
+<view class="myLogin">
+	<block wx:if="{{isLogin}}">
+		<image src="{{src}}"></image>
+		<text>{{nickName}}</text>
+	</block>
+	<button type="primary" wx:else bindtap="getUserProfile">点此登录</button>
+</view>
+<!-- 区域2，版本号 -->
+<view class="content">
+	<text class="left">版本号</text>
+	<text class="right">开发者版本</text>
+</view>
+<!-- 区域3，我的信息 -->
+<view class="content">
+	<text class="left">开发者</text>
+	<text class="right">哈哈哈</text>
+</view>
+<!-- 区域4，小程序信息 -->
+<view class="content">
+	<text class="left">程序名</text>
+	<text class="right">说天气</text>
+</view>
+<!-- 区域4，退出登录 -->
+<button type="warn" wx:if="{{isLogin}}" bindtap="logout"
+style="width:100%; position: fixed; bottom: 0;">
+	退出登录
+</button>
